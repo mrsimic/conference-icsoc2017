@@ -1,0 +1,147 @@
+@prefix bns:   <http://business-name-system.org/base/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix v:     <http://schema.org/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix gr:    <http://purl.org/goodrelations/v1#> .
+
+<http://business-name-system.org/base>
+        bns:description  "Business Name System" ;
+        bns:hasDomain    <http://business-name-system.org/babysitting> , <http://business-name-system.org/parking> , <http://business-name-system.org/gastronomy> , <http://business-name-system.org/ticketing> .
+
+<http://business-name-system.org/ticketing>
+        a              "domain" ;
+        rdfs:comment   "ticketing ..." ;
+        rdfs:label     "ticketing" ;
+        bns:hasEntity  <http://business-name-system.org/entity/AlteOper> , <http://business-name-system.org/entity/eventim> .
+
+<http://business-name-system.org/entity/AlteOper>
+        rdfs:comment            "Alte Oper ..." ;
+        rdfs:label              "AlteOper" ;
+        gr:BusinessEntity       [ bns:hasGlobalIdentifier  "99zU67FF42" ;
+                                  bns:hasPeerID            "gftp8vwcekfyldi" ;
+                                  gr:address               <http://business-name-system.org/entity/AlteOper/address> ;
+                                  gr:category              "Oper" ;
+                                  gr:description           "  ...  " ;
+                                  gr:legalName             "Alte Oper Frankfurt" ;
+                                  v:email                  "alte@oper.de" ;
+                                  v:telephone              "+49 63 1234545"
+                                ] ;
+        gr:hasBusinessFunction  "sell" .
+
+<http://business-name-system.org/entity/AlteOper/address>
+        v:postalAddress  <http://business-name-system.org/entity/AlteOper/postalAddress> .
+
+<http://business-name-system.org/entity/AlteOper/postalAddress>
+        v:addressLocality  "  Frankfurt  " ;
+        v:postalCode       "  65432  " ;
+        v:streetAddress    "  Operplatz  " .
+
+<http://business-name-system.org/babysitting>
+        a              "domain" ;
+        rdfs:comment   "babysitting ..." ;
+        rdfs:label     "babysitting" ;
+        bns:hasEntity  <http://business-name-system.org/entity/LittleMonkeys> .
+
+<http://business-name-system.org/entity/LittleMonkeys>
+        rdfs:comment            "Bilingual English and German nursery, with garden, for 1-3 year olds." ;
+        rdfs:label              "Little Monkeys" ;
+        gr:BusinessEntity       [ bns:hasGlobalIdentifier  "60311-FFM-98797" ;
+                                  bns:hasPeerID            "205w270gw8p30udi" ;
+                                  gr:address               <http://business-name-system.org/entity/LittleMonkeys/address> ;
+                                  gr:category              "Nanny Services" ;
+                                  gr:description           "Bilingual English and German nursery, with garden, for 1-3 year olds." ;
+                                  gr:legalName             "Little Monkeys GmbH" ;
+                                  v:email                  "info@frankfurt-little-monkeys.de" ;
+                                  v:telephone              "069-5555-555" ;
+                                  v:web                    "http://www.frankfurt-little-monkeys.de"
+                                ] ;
+        gr:hasBusinessFunction  "sell" .
+
+<http://business-name-system.org/entity/LittleMonkeys/address>
+        v:postalAddress  <http://business-name-system.org/entity/LittleMonkeys/postalAddress> .
+
+<http://business-name-system.org/entity/LittleMonkeys/postalAddress>
+        v:addressLocality  "  Frankfurt am Main " ;
+        v:postalCode       "  60318  " ;
+        v:streetAddress    "  Glauburgstr. 36  " .
+
+<http://business-name-system.org/parking>
+        a              "domain" ;
+        rdfs:comment   "parking ..." ;
+        rdfs:label     "parking" ;
+        bns:hasEntity  <http://business-name-system.org/entity/ParkhausMyZeil> .
+
+<http://business-name-system.org/entity/ParkhausMyZeil>
+        rdfs:comment            "Parking Garage in Frankfurt downtown" ;
+        rdfs:label              "Parkhaus MyZeil" ;
+        gr:BusinessEntity       [ bns:hasGlobalIdentifier  "60432-FFM-00101" ;
+                                  bns:hasPeerID            "08m243vf8zzadcxr" ;
+                                  gr:address               <http://business-name-system.org/entity/ParkhausMyZeil/address> ;
+                                  gr:category              "Garage" ;
+                                  gr:description           "Parking Garage in Frankfurt downtown" ;
+                                  gr:legalName             "Parkhaus MyZeil - PalaisQuartier APCOA" ;
+                                  v:email                  "info@PalaisQuartierAPCOA.de" ;
+                                  v:telephone              "0711 30570305" ;
+                                  v:web                    "http://www.PalaisQuartierAPCOA.de/MyZeil"
+                                ] ;
+        gr:hasBusinessFunction  "sell" .
+
+<http://business-name-system.org/entity/ParkhausMyZeil/address>
+        v:postalAddress  <http://business-name-system.org/entity/ParkhausMyZeil/postalAddress> .
+
+<http://business-name-system.org/entity/ParkhausMyZeil/postalAddress>
+        v:addressLocality  "  Frankfurt  " ;
+        v:postalCode       "  60432  " ;
+        v:streetAddress    "  Große Eschenheimer Str. 10  " .
+
+<http://business-name-system.org/gastronomy>
+        a              "domain" ;
+        rdfs:comment   "gastronomy ..." ;
+        rdfs:label     "gastronomy" ;
+        bns:hasEntity  <http://business-name-system.org/entity/RestaurantTrattoriaFantastico> .
+
+<http://business-name-system.org/entity/RestaurantTrattoriaFantastico>
+        rdfs:comment            "Italian Two-Star Restaurant in Frankfurt downtown" ;
+        rdfs:label              "Trattoria Fantastico" ;
+        gr:BusinessEntity       [ bns:hasGlobalIdentifier  "60311-FFM-12345" ;
+                                  bns:hasPeerID            "s4621ig6hnfxn7b9" ;
+                                  gr:address               <http://business-name-system.org/entity/RestaurantTrattoriaFantastico/address> ;
+                                  gr:category              "Itallian" ;
+                                  gr:description           "Italian Two-Star Restaurant in Frankfurt downtown" ;
+                                  gr:legalName             "Restaurant Trattoria Fantastico GmbH" ;
+                                  v:email                  "info@tratoria-fantastico.de" ;
+                                  v:telephone              "069-1570070" ;
+                                  v:web                    "http://www.tratoria-fantastico.de"
+                                ] ;
+        gr:hasBusinessFunction  "sell" .
+
+<http://business-name-system.org/entity/RestaurantTrattoriaFantastico/address>
+        v:postalAddress  <http://business-name-system.org/entity/RestaurantTrattoriaFantastico/postalAddress> .
+
+<http://business-name-system.org/entity/RestaurantTrattoriaFantastico/postalAddress>
+        v:addressLocality  "  Frankfurt  " ;
+        v:postalCode       "  65432  " ;
+        v:streetAddress    "  Fressgass  " .
+
+<http://business-name-system.org/entity/eventim>
+        rdfs:comment            "Europas führendes Ticketing- und Live-Entertainment-Unternehmen." ;
+        rdfs:label              "Eventim" ;
+        gr:BusinessEntity       [ bns:hasGlobalIdentifier  "80333-M-75765" ;
+                                  bns:hasPeerID            "w6sge5hfxenrk9" ;
+                                  gr:address               <http://business-name-system.org/entity/eventim/address> ;
+                                  gr:category              "Tickets" ;
+                                  gr:description           "CTS EVENTIM AG and Co. KGaA is Europas führendes Ticketing- und Live-Entertainment-Unternehmen." ;
+                                  gr:legalName             "CTS EVENTIM AG and Co. KGaA" ;
+                                  v:email                  "info@eventim.de" ;
+                                  v:telephone              "01806-570070" ;
+                                  v:web                    "http://www.eventim.de"
+                                ] ;
+        gr:hasBusinessFunction  "sell" .
+
+<http://business-name-system.org/entity/eventim/address>
+        v:postalAddress  <http://business-name-system.org/entity/eventim/postalAddress> .
+
+<http://business-name-system.org/entity/eventim/postalAddress>
+        v:addressLocality  "  Munich  " ;
+        v:postalCode       "  80333  " ;
+        v:streetAddress    "  Adenauer Str.  " .
